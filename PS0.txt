@@ -1,0 +1,105 @@
+Git lab PS0
+
+Yong Jin Chun		BUID: U15518893
+
+
+Part 1: Introduction Sequence
+
+
+Practice 1
+
+$ delay 2000
+$ show goal
+$ git commit
+$ git commit
+
+
+
+
+Practice 2
+
+$ delay 2000
+$ show goal
+$ git branch bugFix
+$ git checkout bugFix
+
+
+
+Practice 3
+
+$ delay 2000
+$ show goal
+$ git branch bugFix
+$ git checkout bugFix
+$ git commit
+$ git checkout master
+$ git commit
+$ git merge bugFix
+
+
+
+Practice 4
+
+$ delay 2000
+$ show goal
+$ git branch bugFix
+$ git checkout bugFix
+$ git commit
+$ git checkout master
+$ git commit
+$ git checkout bugFix
+$ git rebase master
+
+Part 2 : Ramping UP
+
+Practice 1
+
+$ delay 2000
+$ show goal
+$git checkout C4
+
+
+
+Practice 2
+
+$ delay 2000
+$ show goal
+$ git checkout bugFix^
+
+
+
+
+Practice 3
+
+$ delay 2000
+$ show goal
+$ git checkout HEAD~1
+$ git branch -f master C6
+$ git branch -f bugFix HEAD~1
+
+
+
+
+Practice 4
+
+$ git reset HEAD~1
+$ git checkout pushed
+$ git revert HEAD
+
+
+
+Part 3 : Moving Work Around
+
+
+Practice 1
+
+$ delay 2000
+$ show goal
+$ git cherry-pick C3 C4 C7
+
+
+Practice 2
+
+$ delay 2000
+$ show goal
+$ git rebase -i HEAD~4
