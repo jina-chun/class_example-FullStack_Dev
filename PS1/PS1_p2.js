@@ -43,17 +43,17 @@ const getNums = expression => {
     return pair;
 }
 
+
+console.log("Testing output for Problem2 ");
 console.log()
-console.log("Testing output for Problem2 ")
-console.log()
-let test_expr = ['4+2', '5*7', '6-1', '9/2', '2^8'];
+let p2_test = ['4+2', '5*7', '6-1', '9/2', '2^8'];
 
 
 //testing for multiple inputs
-for (i = 0; i < test_expr.length; i++) {
+for (i = 0; i < p2_test.length; i++) {
 
-    let expr = test_expr[i];
-    console.log(`Fomatted string input ${expr}`);
+    let expr = p2_test[i];
+    console.log(`Formatted string input ${expr}`);
 
     let operator = getOperator(expr)                                          // operation expected '+'
     //console.log(operator);                                                  // return function that matches operator
@@ -67,3 +67,6 @@ for (i = 0; i < test_expr.length; i++) {
     console.log()
 
 }
+
+
+module.exports = {getFunction, getNums, getOperator};

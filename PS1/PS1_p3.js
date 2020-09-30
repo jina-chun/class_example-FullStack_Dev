@@ -3,27 +3,24 @@
 
 const doOperation = (str, operation) => operation(str);
 
-console.log();
-console.log('Testing output for Problem 3:');
-console.log();
-
 
 const breakIn_c = doOperation(
-    "supercalifragilisticexpialidocious",
+        str = "supercalifragilisticexpialidocious",
+        (str) => str.split("c").join(" c").split(" ")
+)
+
+const breakIn_c2 = doOperation(
+    str = "hereismycarthereismycat",
     (str) => str.split("c").join(" c").split(" ")
-    )
-//console.log(`${breakIn_c}`);
-console.log('Part 1: break in character c');
-console.log(breakIn_c);
-console.log()
+)
+
 
 
 const replaceA = doOperation(
-    "supercalifragilisticexpialidocious",
-    (str) => {
+        str = "supercalifragilisticexpialidocious",
+        (str) => {
 
         let modStr = str.toString().replace(/a/g, 'A');
-        console.log('Part 2: replace all a with A')
         //console.log(`${modStr}`);
 
         let numA = modStr.match(/A/g).length;
@@ -37,9 +34,45 @@ const replaceA = doOperation(
         }
 
         return ret;
-
     });
 
+const replaceA2 = doOperation(
+    str = "hereismycarthereismycat",
+    (str) => {
+
+        let modStr = str.toString().replace(/a/g, 'A');
+        //console.log(`${modStr}`);
+
+        let numA = modStr.match(/A/g).length;
+        //console.log(numA);
+
+        let ret = {
+            originalString: str,
+            modifiedString: modStr,
+            numberReplaced: numA,
+            length: modStr.length
+        }
+
+        return ret;
+    });
+
+
+console.log();
+console.log("Testing output for Problem 3");
+console.log();
+
+console.log("Part 1");
+console.log(breakIn_c);
+console.log(breakIn_c2)
+console.log();
+console.log("Part 2");
 console.table(replaceA);
+console.table(replaceA2);
+
+
+
+
+module.exports = {doOperation, replaceA, breakIn_c, breakIn_c2, replaceA2};
+
 
 

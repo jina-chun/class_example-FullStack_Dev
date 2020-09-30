@@ -25,10 +25,11 @@
     <property name="javascript.nodejs.core.library.configured.version" value="14.12.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.11.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs.mocha.mocha_node_package_dir" value="$PROJECT_DIR$/node_modules/mocha" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunManager" selected="Node.js.PS1_p3.js">
+  <component name="RunManager" selected="Mocha.tester.js">
     <configuration name="PS1_p1.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/PS1_p1.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
@@ -38,10 +39,33 @@
     <configuration name="PS1_p3.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/PS1_p3.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
+    <configuration name="test.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="test.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="tester.js" type="mocha-javascript-test-runner">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST_FILE</test-kind>
+      <test-file>$PROJECT_DIR$/test.js</test-file>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Mocha.tester.js" />
+      <item itemvalue="Node.js.PS1_p1.js" />
+      <item itemvalue="Node.js.PS1_p2.js" />
+      <item itemvalue="Node.js.PS1_p3.js" />
+      <item itemvalue="Node.js.test.js" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Node.js.PS1_p3.js" />
         <item itemvalue="Node.js.PS1_p2.js" />
+        <item itemvalue="Node.js.test.js" />
         <item itemvalue="Node.js.PS1_p1.js" />
       </list>
     </recent_temporary>
@@ -58,6 +82,11 @@
       <workItem from="1601299589412" duration="1582000" />
       <workItem from="1601356560464" duration="12387000" />
       <workItem from="1601371434904" duration="29000" />
+      <workItem from="1601465980943" duration="4263000" />
+      <workItem from="1601470625361" duration="1872000" />
+      <workItem from="1601472930129" duration="1037000" />
+      <workItem from="1601474461760" duration="620000" />
+      <workItem from="1601479986749" duration="8200000" />
     </task>
     <servers />
   </component>
@@ -65,25 +94,41 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1379" height="500" key="GridCell.Tab.0.bottom" timestamp="1601371463129">
+    <state x="215" y="24" width="1071" height="772" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601480249997">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state width="1379" height="500" key="GridCell.Tab.0.bottom/0.23.1440.799@0.23.1440.799" timestamp="1601371463129" />
-    <state width="1379" height="500" key="GridCell.Tab.0.center" timestamp="1601371463128">
+    <state x="215" y="24" width="1071" height="772" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.799@0.23.1440.799" timestamp="1601480249997" />
+    <state width="1381" height="609" key="GridCell.Tab.0.bottom" timestamp="1601489170906">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state width="1379" height="500" key="GridCell.Tab.0.center/0.23.1440.799@0.23.1440.799" timestamp="1601371463128" />
-    <state width="1379" height="500" key="GridCell.Tab.0.left" timestamp="1601371463128">
+    <state width="1381" height="609" key="GridCell.Tab.0.bottom/0.23.1440.799@0.23.1440.799" timestamp="1601489170906" />
+    <state width="1381" height="609" key="GridCell.Tab.0.center" timestamp="1601489170906">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state width="1379" height="500" key="GridCell.Tab.0.left/0.23.1440.799@0.23.1440.799" timestamp="1601371463128" />
-    <state width="1379" height="500" key="GridCell.Tab.0.right" timestamp="1601371463129">
+    <state width="1381" height="609" key="GridCell.Tab.0.center/0.23.1440.799@0.23.1440.799" timestamp="1601489170906" />
+    <state width="1381" height="609" key="GridCell.Tab.0.left" timestamp="1601489170905">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state width="1379" height="500" key="GridCell.Tab.0.right/0.23.1440.799@0.23.1440.799" timestamp="1601371463129" />
+    <state width="1381" height="609" key="GridCell.Tab.0.left/0.23.1440.799@0.23.1440.799" timestamp="1601489170905" />
+    <state width="1381" height="609" key="GridCell.Tab.0.right" timestamp="1601489170906">
+      <screen x="0" y="23" width="1440" height="799" />
+    </state>
+    <state width="1381" height="609" key="GridCell.Tab.0.right/0.23.1440.799@0.23.1440.799" timestamp="1601489170906" />
     <state x="366" y="146" width="670" height="676" key="search.everywhere.popup" timestamp="1601300954445">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
     <state x="366" y="146" width="670" height="676" key="search.everywhere.popup/0.23.1440.799@0.23.1440.799" timestamp="1601300954445" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/PS1_p3.js</url>
+          <line>25</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
