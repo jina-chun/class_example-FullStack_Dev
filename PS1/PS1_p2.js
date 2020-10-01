@@ -50,7 +50,7 @@ let p2_test = ['4+2', '5*7', '6-1', '9/2', '2^8'];
 
 
 //testing for multiple inputs
-for (i = 0; i < p2_test.length; i++) {
+for (let i = 0; i < p2_test.length; i++) {
 
     let expr = p2_test[i];
     console.log(`Formatted string input ${expr}`);

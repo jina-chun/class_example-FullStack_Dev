@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8fbdd09-79ec-48ab-afff-cde1f33dc469" name="Default Changelist" comment="" />
+    <list default="true" id="d8fbdd09-79ec-48ab-afff-cde1f33dc469" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PS1_p2.js" beforeDir="false" afterPath="$PROJECT_DIR$/PS1_p2.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +35,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1i8qQOhfEHrAlWNvJFAZa5CjYI2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -87,48 +112,50 @@
       <workItem from="1601472930129" duration="1037000" />
       <workItem from="1601474461760" duration="620000" />
       <workItem from="1601479986749" duration="8200000" />
+      <workItem from="1601489286854" duration="12000" />
+      <workItem from="1601571024873" duration="41000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="215" y="24" width="1071" height="772" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601480249997">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
     <state x="215" y="24" width="1071" height="772" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.799@0.23.1440.799" timestamp="1601480249997" />
-    <state width="1381" height="609" key="GridCell.Tab.0.bottom" timestamp="1601489170906">
+    <state width="1381" height="609" key="GridCell.Tab.0.bottom" timestamp="1601571065071">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state width="1381" height="609" key="GridCell.Tab.0.bottom/0.23.1440.799@0.23.1440.799" timestamp="1601489170906" />
-    <state width="1381" height="609" key="GridCell.Tab.0.center" timestamp="1601489170906">
+    <state width="1381" height="609" key="GridCell.Tab.0.bottom/0.23.1440.799@0.23.1440.799" timestamp="1601571065071" />
+    <state width="1381" height="609" key="GridCell.Tab.0.center" timestamp="1601571065070">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state width="1381" height="609" key="GridCell.Tab.0.center/0.23.1440.799@0.23.1440.799" timestamp="1601489170906" />
-    <state width="1381" height="609" key="GridCell.Tab.0.left" timestamp="1601489170905">
+    <state width="1381" height="609" key="GridCell.Tab.0.center/0.23.1440.799@0.23.1440.799" timestamp="1601571065070" />
+    <state width="1381" height="609" key="GridCell.Tab.0.left" timestamp="1601571065070">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state width="1381" height="609" key="GridCell.Tab.0.left/0.23.1440.799@0.23.1440.799" timestamp="1601489170905" />
-    <state width="1381" height="609" key="GridCell.Tab.0.right" timestamp="1601489170906">
+    <state width="1381" height="609" key="GridCell.Tab.0.left/0.23.1440.799@0.23.1440.799" timestamp="1601571065070" />
+    <state width="1381" height="609" key="GridCell.Tab.0.right" timestamp="1601571065071">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state width="1381" height="609" key="GridCell.Tab.0.right/0.23.1440.799@0.23.1440.799" timestamp="1601489170906" />
+    <state width="1381" height="609" key="GridCell.Tab.0.right/0.23.1440.799@0.23.1440.799" timestamp="1601571065071" />
     <state x="366" y="146" width="670" height="676" key="search.everywhere.popup" timestamp="1601300954445">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
     <state x="366" y="146" width="670" height="676" key="search.everywhere.popup/0.23.1440.799@0.23.1440.799" timestamp="1601300954445" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/PS1_p3.js</url>
-          <line>25</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
