@@ -56,7 +56,7 @@ const replaceA2 = doOperation(
         return ret;
     });
 
-
+/*
 console.log();
 console.log("Testing output for Problem 3");
 console.log();
@@ -68,6 +68,7 @@ console.log();
 console.log("Part 2");
 console.table(replaceA);
 console.table(replaceA2);
+ */
 
 
 

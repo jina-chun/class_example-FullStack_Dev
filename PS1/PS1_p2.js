@@ -22,7 +22,7 @@ const getFunction = (operator) => {
             break;
 
         case '^':
-            return (left, right) => left ** right;           //console.log(`${left} ^ ${right}`);
+            return (left, right) => left ^ right;           //console.log(`${left} ^ ${right}`);
             break;
     }
 }
@@ -44,12 +44,13 @@ const getNums = expression => {
 }
 
 
+/*
 console.log("Testing output for Problem2 ");
 console.log()
 let p2_test = ['4+2', '5*7', '6-1', '9/2', '2^8'];
 
 
-//testing for multiple inputs
+testing for multiple inputs
 for (let i = 0; i < p2_test.length; i++) {
 
     let expr = p2_test[i];
@@ -63,10 +64,8 @@ for (let i = 0; i < p2_test.length; i++) {
 
     // pass the values
     console.log(`${getFunction(operator)}`);
-    console.log(`${expr} = ${getFunction(operator)(parseInt(nums.left), parseInt(nums.right))}`);
+    //console.log(`${expr} = ${getFunction(operator)(parseInt(nums.left), parseInt(nums.right))}`);
     console.log()
-
-}
-
+}*/
 
 module.exports = {getFunction, getNums, getOperator};
