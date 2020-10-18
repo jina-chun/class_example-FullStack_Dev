@@ -1,0 +1,11 @@
+extends layout
+
+block content
+
+    h3 PS3 using Get and Post
+
+    if isGet
+        p b) returned from Get method : #{string}
+
+    else if isPost
+        p c) returned from Post method : #{string} and #{length}
