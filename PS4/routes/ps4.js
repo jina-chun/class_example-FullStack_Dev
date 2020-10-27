@@ -1,9 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const fetch = require('node-fetch');
+const CONFIG = require('../config/fetchConfigs');
+
 
 //HTML
-fetch('https://www.metaweather.com/api/location/')
+fetch('https://www.metaweather.com/api/location/2459115/')
     .then(res => res.text())
     //.then(body => console.log(body))
     .then(done => console.log("DONE! fetch html"))
@@ -17,20 +19,28 @@ fetch('https://www.metaweather.com/api/location/2459115/')
     .catch(error => console.log("Failed to fetch JSON"))
 
 
+/* PS4 code starts here! the code above is present for testing purpose */
+// retrieve the external API data
+const getData = async location => {
+    console.log("Fetch data from external API")
+    let rawData = await fetch(CONFIG.fetchOptions.url+ location.toString() + "/");
+    let jsData = await rawData.json();
+    return jsData;
+}
 
-// b) A route using the POST method that retrieves data from an external API
+// route using post method
 router.route('/')
     .post( (req, res, next) => {
-        console.log("Fetch JSON with POST")         //pass in the req.query into fetch?
-        const woeid = req.body.location_id;
-        const url = 'https://www.metaweather.com/api/location/' + woeid.toString() + "/";
-        fetch(url)
-            .then(res => res.json())
-            .then(json => res.render('ps4',
+        console.log("route using POST method")
+
+        //incoming external data
+        getData(req.body.location_id)
+            //rendering to back-end
+            .then(jsData => res.render('ps4',
                 {
-                    'city' : json.title,
-                    'today' : json.consolidated_weather[0],
-                    'tomorrow' : json.consolidated_weather[1]
+                    'city' : jsData.title,
+                    'today' : jsData.consolidated_weather[0],
+                    'tomorrow' : jsData.consolidated_weather[1]
                 }   ))
             .catch(error => console.log("Failed to fetch JSON"))
     })
