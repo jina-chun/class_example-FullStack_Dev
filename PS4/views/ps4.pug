@@ -1,0 +1,15 @@
+extends layout
+
+
+block content
+
+    h3 PS4 POST method to retrieve data from MetaWeather API
+    p important: specify the 'Where on Earth ID'
+    br
+    p Here is today's weather information
+    p City : #{city}
+    p Date : #{today.applicable_date}
+    p Weather : #{today.weather_state_name}
+    p Temperature : &nbsp; min = #{today.min_temp} &nbsp; max = #{today.max_temp}
+    p Humidity : #{today.humidity}
+    p Wind Speed : #{today.wind_speed}
