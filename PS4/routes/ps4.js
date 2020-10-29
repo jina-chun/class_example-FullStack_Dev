@@ -23,8 +23,8 @@ const CONFIG = require('../config/fetchConfigs');
 // retrieve the external API data
 const getData = async location => {
     console.log("Fetch data from external API")
-    let rawData = await fetch(CONFIG.fetchOptions.url + "/" + location.toString());
-    let jsData = await rawData.json();
+    const rawData = await fetch(CONFIG.fetchOptions.url + "/" + location.toString());
+    const jsData = await rawData.json();
     return jsData;
 }
 
