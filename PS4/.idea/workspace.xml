@@ -21,9 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8bc35981-5fc0-44a9-8bbd-d01ccb0b1639" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/fetchConfigs.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/fetchConfigs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/ps4.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/ps4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ps4.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/ps4.pug" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +82,7 @@
       <workItem from="1603811968867" duration="4015000" />
       <workItem from="1603823431084" duration="6000" />
       <workItem from="1603984174918" duration="105000" />
-      <workItem from="1603984555848" duration="977000" />
+      <workItem from="1603984555848" duration="1111000" />
     </task>
     <servers />
   </component>

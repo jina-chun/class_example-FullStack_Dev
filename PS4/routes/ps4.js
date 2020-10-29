@@ -34,10 +34,8 @@ router.route('/')
     .post( (req, res, next) => {
         console.log("route using POST method")
 
-        //incoming external data
+        //incoming external data render to back-end
         getData(req.body.location_id)
-
-            //rendering to back-end
             .then(jsData => res.render('ps4',
                 {
                     'city' : jsData.title,
