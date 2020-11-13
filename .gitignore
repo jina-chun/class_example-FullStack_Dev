@@ -1,3 +1,7 @@
+# git ignore config
+config/
+
+
 # Logs
 logs
 *.log
