@@ -1,0 +1,61 @@
+GET http://localhost:3000/redis/2459115
+Accept: application/json
+
+<> 2020-11-18T011947.200.json
+
+###
+
+GET http://localhost:3000/redis/2459115
+Accept: application/json
+
+<> 2020-11-18T011846.200.json
+
+###
+
+GET http://localhost:3000/redis/23456
+Accept: application/json
+
+<> 2020-11-18T011730.200.json
+
+###
+
+GET http://localhost:3000/redis/23456
+Accept: application/json
+
+###
+
+GET http://localhost:3000/redis/location
+Accept: application/json
+
+<> 2020-11-18T010705.200.html
+
+###
+
+POST http://localhost:3000/redis/here
+Content-Type: application/x-www-form-urlencoded
+
+id=99&content=new-element
+
+###
+
+POST http://localhost:3000/redis/2345
+Content-Type: application/x-www-form-urlencoded
+
+id=99&content=new-element
+
+###
+
+POST http://localhost:3000/redis/2345
+Content-Type: application/x-www-form-urlencoded
+
+id=99&content=new-element
+
+###
+
+POST http://localhost:3000/redis/hereisID
+Content-Type: application/x-www-form-urlencoded
+
+id=99&content=new-element
+
+###
+
