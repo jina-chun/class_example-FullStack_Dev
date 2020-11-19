@@ -19,37 +19,77 @@ client.on("error", function (error) {
 });
 
 router.post('/', async (req, res, next) => {
-    console.log("route using redis ")
+    console.log("Route using redis")
     const locationID = req.body.location;
     let match = await asyncExists(locationID);
 
     // check for valid response
     if (match) {
-        console.log("cached matched")
-        let jsData = await asyncGet(locationID);
-        //build JSON data
+        console.log("cache matched")
+        let jsonStr = await asyncGet(locationID);
+        let jsonObject = JSON.parse(jsonStr);           //build JSON data
+
+        const today = jsonObject.consolidated_weather[0];
+        //const tmr = jsonObject.consolidated_weather[1];
+
+        // formatted response, similar to PS4 pug file
         let response = {
-            key: locationID,
-            value: jsData,
-            cached: true
+            woeid: locationID,
+            cached: true,
+            city: jsonObject.title,
+            date: today.applicable_date,
+            weather: today.weather_state_name,
+            minTemp: today.min_temp,
+            maxTemp: today.max_temp,
+            humidity: today.humidity,
+            windSpeed: today.wind_speed
         }
-        res.send(response);
+
+        // original JSON data object with cache flag
+        let raw_response = {
+            woeid: locationID,
+            cached: true,
+            value: jsonObject
+        }
+        res.send(raw_response);
     }
 
-    // not in cache
+
+    // if not in cache, fetch from API
     else {
-        console.log("no cache here")
-        let retJsData = await getData(locationID)
-        let status = await asyncSet(locationID, JSON.stringify(retJsData));
+        console.log("nothing in cache")
+        let jsData = await getData(locationID)
+        await asyncSet(locationID, JSON.stringify(jsData));
+        const today = jsData.consolidated_weather[0];
+
+        // formatted response, similar to PS4 pug file
         let response = {
-            key: locationID,
-            value: retJsData,
-            cached: false
+            woeid: locationID,
+            cached: false,
+            city: jsData.title,
+            date: today.applicable_date,
+            weather: today.weather_state_name,
+            minTemp: today.min_temp,
+            maxTemp: today.max_temp,
+            humidity: today.humidity,
+            windSpeed: today.wind_speed
         }
+
+        // original JSON data object with cache flag
+        let raw_response = {
+            woeid: locationID,
+            cached: false,
+            value: jsData
+        }
+
         await asyncExpire(locationID, 15);
-        res.send(response);
+        res.send(raw_response);
     }
 })
+
+
+
+
 
 
 // retrieve the external API data
@@ -60,21 +100,6 @@ const getData = async location => {
     return jsData;
 }
 
-
-// router.route('/')
-//     .post( (req, res, next) => {
-//         console.log("route using POST method")
-//
-//         //incoming external data render to back-end
-//         getData(req.body.location_id)
-//             .then(jsData => res.render('ps4',
-//                 {
-//                     'city' : jsData.title,
-//                     'today' : jsData.consolidated_weather[0],
-//                     'tmr' : jsData.consolidated_weather[1]
-//                 }   ))
-//             .catch(error => console.log("Failed to fetch JSON"))
-//     })
 
 
 module.exports = router;
