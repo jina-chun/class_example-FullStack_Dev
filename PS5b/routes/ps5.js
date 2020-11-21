@@ -33,17 +33,17 @@ router.post('/', async (req, res, next) => {
         //const tmr = jsonObject.consolidated_weather[1];
 
         // formatted response, similar to PS4 pug file
-        let response = {
-            woeid: locationID,
-            cached: true,
-            city: jsonObject.title,
-            date: today.applicable_date,
-            weather: today.weather_state_name,
-            minTemp: today.min_temp,
-            maxTemp: today.max_temp,
-            humidity: today.humidity,
-            windSpeed: today.wind_speed
-        }
+        // let response = {
+        //     woeid: locationID,
+        //     cached: true,
+        //     city: jsonObject.title,
+        //     date: today.applicable_date,
+        //     weather: today.weather_state_name,
+        //     minTemp: today.min_temp,
+        //     maxTemp: today.max_temp,
+        //     humidity: today.humidity,
+        //     windSpeed: today.wind_speed
+        // }
 
         // original JSON data object with cache flag
         let raw_response = {
@@ -63,17 +63,17 @@ router.post('/', async (req, res, next) => {
         const today = jsData.consolidated_weather[0];
 
         // formatted response, similar to PS4 pug file
-        let response = {
-            woeid: locationID,
-            cached: false,
-            city: jsData.title,
-            date: today.applicable_date,
-            weather: today.weather_state_name,
-            minTemp: today.min_temp,
-            maxTemp: today.max_temp,
-            humidity: today.humidity,
-            windSpeed: today.wind_speed
-        }
+        // let response = {
+        //     woeid: locationID,
+        //     cached: false,
+        //     city: jsData.title,
+        //     date: today.applicable_date,
+        //     weather: today.weather_state_name,
+        //     minTemp: today.min_temp,
+        //     maxTemp: today.max_temp,
+        //     humidity: today.humidity,
+        //     windSpeed: today.wind_speed
+        // }
 
         // original JSON data object with cache flag
         let raw_response = {
