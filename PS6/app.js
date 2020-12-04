@@ -7,7 +7,8 @@ const logger = require('morgan');
 //mounting here
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-const redisRouter = require('./routes/ps5');
+const ps4Router = require('./routes/ps4');
+
 
 const app = express();
 
@@ -22,10 +23,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //mounting here too
+app.use('/ps4', ps4Router);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/redis', redisRouter);
-
 
 
 // catch 404 and forward to error handler
