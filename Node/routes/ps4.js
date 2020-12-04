@@ -25,6 +25,7 @@ const getData = async location => {
     console.log("Fetch data from external API")
     const rawData = await fetch(CONFIG.fetchOptions.url + "/" + location.toString());
     const jsData = await rawData.json();
+    console.log(jsData)
     return jsData;
 }
 

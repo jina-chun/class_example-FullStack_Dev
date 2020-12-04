@@ -1,0 +1,9 @@
+
+<div>
+  <button (click)="showWeather()">Fetch Data</button>
+  <div *ngIf="showMore === true">
+    <ul *ngFor="let week of date">
+      <p>{{convertJSON(week)}}</p>
+    </ul>
+  </div>
+</div>
