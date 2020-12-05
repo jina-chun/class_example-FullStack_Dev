@@ -11,12 +11,22 @@ export class AppComponent {
   title = 'PS6';
   date: Week[] = date;
   week: Week;
-  showMore = false;
+  fetchData = false;
+  showData: number;
+  showAll = false;
 
   constructor() { }
 
-  showWeather(): void {
-    this.showMore = !this.showMore;
+  showOptions(): void {
+    this.fetchData = !this.fetchData;
+  }
+
+  showRaw(): void {
+    this.showAll = !this.showAll;
+  }
+
+  showMore(id: number): void {
+    this.showData = id;
   }
 
   convertJSON(file: Week): string {
