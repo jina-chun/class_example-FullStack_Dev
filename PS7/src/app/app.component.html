@@ -2,10 +2,9 @@
 
 <h3>PS7 Node and Angular Working...</h3>
 
+<br>
+<label>Type in Where on Earth ID </label><input type="number" value="" [(ngModel)]="location"/>
+<button type="submit" (click)="getWeather(location)">Get Weather</button><br>
 
-<input type="number" value="" [(ngModel)]="location"/>
-<button (click)="getWeather(location)">Get Weather</button><br>
-
-<p>Calling HTTP from a service</p>
 <app-calling-http [result]="result" [fetchData]="fetchData" [cache]="cache"></app-calling-http>
 
