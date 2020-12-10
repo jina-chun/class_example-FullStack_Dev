@@ -1,0 +1,15 @@
+<p>Calling HTTP from a service</p>
+
+<input type="text" value="" [(ngModel)]="locationID" />
+<button (click)="getWeather(locationID)">Get Weather</button><br>
+
+<!--  <p>Current temperature: {{convertJSON(result)}}</p>-->
+
+<div *ngIf="fetchData===true">
+  <p>Show the Weather in {{city}}</p>
+  <ul *ngFor="let one of result">
+    <div (click)="showMore(one.id)"><b>Date {{one.applicable_date}}</b></div><br>
+    <li *ngIf="showData== one.id">Weather Data : {{convertJSON(one)}}</li>
+
+  </ul>
+</div>
