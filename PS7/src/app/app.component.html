@@ -1,4 +1,11 @@
-<h3>PS7 Node and Angular Working...</h3>
-<br>
 
-<app-calling-http></app-calling-http>
+
+<h3>PS7 Node and Angular Working...</h3>
+
+
+<input type="number" value="" [(ngModel)]="location"/>
+<button (click)="getWeather(location)">Get Weather</button><br>
+
+<p>Calling HTTP from a service</p>
+<app-calling-http [result]="result" [fetchData]="fetchData" [cache]="cache"></app-calling-http>
+

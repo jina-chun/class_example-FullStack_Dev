@@ -1,10 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {WxService} from '../services/wx.service';
-
-interface Data {
-  consolidated_weather: object;
-  title: object;
-}
+import { Component, Input, OnInit } from '@angular/core';
 
 
 @Component({
@@ -12,15 +6,13 @@ interface Data {
   templateUrl: './calling-http.component.html',
   styleUrls: ['./calling-http.component.css']
 })
+
 export class CallingHTTPComponent implements OnInit {
+  @Input() result: object = [];
+  @Input() cache: object;
+  @Input()fetchData: boolean;
 
-// inject service into component
-  constructor(private wxService: WxService) { }
-  locationID: number;
-  result: object = [];
-  city: object;
-
-  fetchData = false;
+  constructor() { }
   showData: number;
 
   ngOnInit(): void {
@@ -35,13 +27,4 @@ export class CallingHTTPComponent implements OnInit {
     return str;
   }
 
-  getWeather(locationID: number): void { // call a service to get the current data
-    this.fetchData = !this.fetchData;
-    this.wxService.getWeather(locationID).subscribe(
-      (response: Data) => {
-        this.result = response.consolidated_weather;
-        this.city = response.title;
-      }
-    );
-  }
 }

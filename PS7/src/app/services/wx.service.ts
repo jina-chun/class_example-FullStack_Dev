@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {wxConfig} from '../config/wxConfig';
 import {Observable} from 'rxjs';
@@ -11,7 +11,8 @@ export class WxService {
   constructor(private http: HttpClient) { }
 
   getWeather(locationID): Observable<any> {
-    return this.http.get(wxConfig.baseURL + '?location=' + locationID, {
-        observe: 'body', responseType: 'json'});
+    const result = this.http.get(wxConfig.baseURL + '?location=' + locationID,
+      {observe: 'body', responseType: 'json'});
+    return result;
   }
 }
